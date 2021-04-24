@@ -22,8 +22,8 @@ pipeline {
             steps {
             echo "build .deb package"
             sh """
-                rm -f *.deb
-                fpm -s gem -t deb json
+                rm -f *.py
+                fpm -s py -t deb -n checkuser.py
             """
             }
         }
