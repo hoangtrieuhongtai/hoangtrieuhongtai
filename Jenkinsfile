@@ -23,7 +23,7 @@ pipeline {
             echo "build .deb package"
             sh """
                 rm -f *.deb
-                fpm -s py -t deb -n checkuser.py
+                fpm -s py -t deb  checkuser.py
             """
             }
         }
