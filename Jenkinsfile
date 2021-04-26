@@ -51,13 +51,4 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            echo "Build Completed!"
-        }
-        cleanup {
-            print "Cleaning up workspace directories"
-            cleanWs deleteDirs: true
-        }
-    }
 }
