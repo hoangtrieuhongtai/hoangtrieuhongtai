@@ -50,25 +50,6 @@ pipeline {
                 )
             }
         }
-        stage ('Issues Collection') {
-            steps {
-                rtCollectIssues (
-                    serverId: 'T1i-Jfrog-Artifactory',
-                    config: """{
-                        "version": 1,
-                        "issues": {
-                            "trackerName": "JIRA",
-                            "regexp": "(.+-[0-9]+)\\s-\\s(.+)",
-                            "keyGroupIndex": 1,
-                            "summaryGroupIndex": 2,
-                            "trackerUrl": "https://bitbucket.surfcrew.com/projects/SAFLY/repos/devtools/commits/2df197abdc1b58a343767561e34ecff860b574ad",
-                            "aggregate": "true",
-                            "aggregationStatus": "RELEASED"
-                        }
-                    }"""
-                )
-            }
-        }
     }
     post {
         always {
