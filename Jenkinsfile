@@ -53,7 +53,7 @@ pipeline {
         stage ('Issues Collection') {
             steps {
                 rtCollectIssues (
-                    serverId: 'T1i-Jfrog-Artifactory'D,
+                    serverId: 'T1i-Jfrog-Artifactory',
                     config: """{
                         "version": 1,
                         "issues": {
