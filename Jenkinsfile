@@ -23,7 +23,7 @@ pipeline {
             echo "build .deb package"
             sh """
                 rm -f *.deb
-                fpm -s gem -t deb nginx
+                fpm -s gem -t deb --deb-no-default-config-files flag nginx 
                 mv *.deb nginx-${BUILD_NUMBER}.deb
             """
             }
