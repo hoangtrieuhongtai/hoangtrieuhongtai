@@ -23,7 +23,7 @@ pipeline {
             echo "build .deb package"
             sh """
                 rm -f *.deb
-                fpm -s python -t deb --python-pip=pip3 --python-bin=python3 checkuser.py
+                fpm -s python -t deb nginx
             """
             }
         }
